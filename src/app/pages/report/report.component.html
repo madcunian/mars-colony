@@ -12,11 +12,9 @@
         </select>
       </div>
       <textarea placeholder="Action taken" [(ngModel)]="reportAction" name="Action"></textarea>
+      <div class="report-button">
+        <button type="submit" (click)="postReport()">Submit Report</button>
+      </div>
     </fieldset>
-  <div class="report-button">
-    <fieldset>
-      <button type="submit" (click)="postReport()">Submit Report</button>
-    </fieldset>
-  </div>
   </form>
 </div>
