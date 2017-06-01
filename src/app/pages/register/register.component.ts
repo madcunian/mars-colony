@@ -31,12 +31,23 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.jobService.getData()
-    .subscribe((data) => {
-      this.jobs = data.jobs;
-    });
+    this.registerForm = new FormGroup({
+      name: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(100),
+        Validators.minLength(3)
+      ]),
+      age: new FormControl('', [Validators.required]),
+      job_id: new FormControl('', [])
+    })
   }
 
+  // ngOnInit() {
+  //   this.jobService.getData()
+  //   .subscribe((data) => {
+  //     this.jobs = data.jobs;
+  //   });
+  // }
   postColonist() {
     const colonist = new Colonist(this.colonistName, this.colonistAge, this.colonistJobId);
     this.colonistService.postData(colonist)
