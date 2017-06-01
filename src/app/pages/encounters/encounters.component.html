@@ -1,0 +1,16 @@
+<div class="enc-bg">
+  <div class="header">
+    <h2>{{message}}</h2>
+    <p>See an alien? Report it!</p>
+  </div>
+  <ul>
+    <li *ngFor="let encounter of encounters">
+      <div class="date-name">{{encounter.date}}, {{encounter.atype}}</div>{{encounter.action}}
+    </li>
+  </ul>
+  <div class="footer">
+    <fieldset>
+      <button type="submit" class="enc-button">Report Encounter</button>
+    </fieldset>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="report-bg">
+  <div class="header">
+    <h2>Report Encounter</h2>
+    <p>Safety on Mars is your responsibility</p>
+  </div>
+  <form class="report-form">
+    <fieldset>
+      <div class="report-select">
+        <select [(ngModel)]="reportColonistId" name="Aliens">
+          <option value="no alien">Select alien type</option>
+          <option value="{{alien.id}}" *ngFor="let alien of aliens" name="Name">{{alien.type}}</option>
+        </select>
+      </div>
+      <textarea placeholder="Action taken" [(ngModel)]="reportAction" name="Action"></textarea>
+    </fieldset>
+  </form>
+  <div class="report-button">
+    <fieldset>
+      <button type="submit" (click)="postReport()">Submit Report</button>
+    </fieldset>
+  </div>
+</div>

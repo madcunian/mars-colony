@@ -1,0 +1,19 @@
+<div class="register-bg">
+  <h2 class="register-title">Register</h2>
+  <form class="register-form">
+    <fieldset>
+      <input [(ngModel)]="colonistName" type="text" name="Name" placeholder="Name">
+      <input [(ngModel)]="colonistAge" type="text" name="Age" placeholder="Age">
+      <div class="select-form">
+        <select [(ngModel)]="colonistJobId" name="Occupation">
+          <option value="no job">Select Occupation</option>
+          <option *ngFor="let job of jobs" value="{{job.id}}" >
+            {{job.name}}</option>
+        </select>
+      </div>
+    </fieldset>
+  </form>
+  <fieldset>
+    <button type="submit" (click)="postColonist()">Check in</button>
+  </fieldset>
+</div>
