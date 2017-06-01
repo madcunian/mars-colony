@@ -56,3 +56,16 @@ html, body {
 * {
   box-sizing: border-box;
 }
+
+.loading-bg {
+	background-color: black;
+	height: 100vh;
+}
+
+.loading-title {
+	color: #ff5435;
+	font-family: 'Roboto', sans-serif;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+}

@@ -20,17 +20,24 @@ import {
 })
 export class RegisterComponent implements OnInit {
 
-  jobs: Job[] = [];
+  jobs: Job[];
   colonistName: string;
   colonistAge: string;
-  colonistJobId: string = "no job";
+  colonistJobId: string;
   colonist: Colonist;
+  registerForm: FormGroup;
+  NO_JOB_SELECTED = '(none)';
 
-  constructor(private jobService: JobsService, private colonistService: ColonistService) {
+  constructor(private jobService: JobsService, private colonistService: ColonistService, private formBuilder: FormBuilder) {
 
   }
 
   ngOnInit() {
+    this.jobService.getData()
+        .subscribe((data) => {
+          this.jobs = data.jobs;
+        });
+
     this.registerForm = new FormGroup({
       name: new FormControl('', [
         Validators.required,
@@ -38,16 +45,10 @@ export class RegisterComponent implements OnInit {
         Validators.minLength(3)
       ]),
       age: new FormControl('', [Validators.required]),
-      job_id: new FormControl('', [])
+      job_id: new FormControl(this.NO_JOB_SELECTED, [])
     })
   }
 
-  // ngOnInit() {
-  //   this.jobService.getData()
-  //   .subscribe((data) => {
-  //     this.jobs = data.jobs;
-  //   });
-  // }
   postColonist() {
     const colonist = new Colonist(this.colonistName, this.colonistAge, this.colonistJobId);
     this.colonistService.postData(colonist)
