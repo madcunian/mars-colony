@@ -3,6 +3,14 @@ import { Job } from '../../models/job';
 import { JobsService } from '../../services/job.service';
 import { Colonist } from '../../models/colonist';
 import { ColonistService } from '../../services/colonist.service';
+import { 
+  FormGroup,
+  FormControl,
+  FormBuilder,
+  Validators, 
+  ValidatorFn,
+  AbstractControl
+} from '@angular/forms';
 
 @Component({
   selector: 'app-register',
