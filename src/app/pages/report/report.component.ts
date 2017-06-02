@@ -26,9 +26,12 @@ export class ReportComponent implements OnInit {
   reportForm: FormGroup;
   NO_ALIEN_SELECTED = '(none)';
 
-  constructor(private router: Router, private alienService: AliensService, private reportService: ReportService, private formBuilder: FormBuilder) {
-
-  }
+  constructor(
+    private router: Router,
+    private alienService: AliensService,
+    private reportService: ReportService,
+    private formBuilder: FormBuilder
+  ) { }
 
   ngOnInit() {
     this.alienService.getData()
