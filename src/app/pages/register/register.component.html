@@ -1,6 +1,6 @@
 <div class="register-bg">
   <h2 class="register-title">Register</h2>
-  <form class="register-form" [formGroup]="registerForm">
+  <form class="register-form" [formGroup]="registerForm" (ngSubmit)="register($event)">
     <fieldset>
       <input type="text" placeholder="Name" required formControlName="name"/>
       <input type="number" placeholder="Age" required formControlName="age"/>
@@ -11,6 +11,6 @@
         </select>
       </div>
     </fieldset>
-    <button type="submit">Register</button>
+    <button type="submit" [disabled]="registerForm.invalid">Check In</button>
   </form>
 </div>
