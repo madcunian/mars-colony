@@ -1,6 +1,7 @@
 .register-bg {
   background:
-    linear-gradient(to bottom, rgba(36,23,33 ,0.9), rgba(0,0,0,0.4)),
+    // radial-gradient(35vh at 50% 65% , rgba(255,84,53,.3), rgba(116,22,48,.6), rgba(0,0,0,.9)),
+    linear-gradient(to bottom, rgba(0,0,0 ,0.9), rgba(255,84,53,.3)),
     url('../../../assets/martian.jpg');
   background-size: cover;
   background-position: 52%;
@@ -18,6 +19,12 @@ h2, button {
   font-size: 2.2rem;
   font-weight: 100;
 }
+
+// h2 {
+//   font-size: 1.5rem;
+//   text-transform: uppercase;
+//   letter-spacing: 1rem;
+// }
 
 .register-form fieldset {
   display: flex;

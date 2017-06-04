@@ -42,9 +42,12 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   NO_JOB_SELECTED = '(none)';
 
-  constructor(private router: Router, private jobService: JobsService, private colonistService: ColonistService, private formBuilder: FormBuilder) {
-
-  }
+  constructor(
+    private router: Router,
+    private jobService: JobsService,
+    private colonistService: ColonistService,
+    private formBuilder: FormBuilder
+  ) {}
 
   ngOnInit() {
     this.jobService.getData()
