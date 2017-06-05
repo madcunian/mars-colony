@@ -1,3 +1,5 @@
+@import '../../../_variables.scss';
+
 .background {
   background-image:
     url('../../../assets/mars.jpg');
@@ -12,10 +14,9 @@
 
 .main-title, h2 {
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: $mars-font;
   font-weight: 100;
   font-size: 2.2rem;
-  // text-align: center;
   text-transform: uppercase;
   margin: 0 auto;
 }
@@ -27,7 +28,7 @@
 }
 
 .lower-title {
-  border-top: 1px solid #ff5435;
+  border-top: 1px solid $mars-red-color;
   font-size: 1rem;
   padding-left: 1.85rem;
   padding-top: .5rem;
@@ -36,7 +37,7 @@
 }
 
 h2 {
-  color: #ff5435;
+  color: $mars-red-color;
   font-size: 2rem;
   text-transform: none;
 }

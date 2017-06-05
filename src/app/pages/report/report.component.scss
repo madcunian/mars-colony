@@ -1,3 +1,5 @@
+@import '../../../_variables.scss';
+
 .report-bg {
   background:
     url('../../../assets/space.jpg');
@@ -13,7 +15,7 @@
 
 .header, button {
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: $mars-font;
   font-weight: 100;
 
   h2 {
@@ -46,14 +48,14 @@
     background-color: transparent;
     border: none;
     border-radius: 0;
-    color: #ff5435;
+    color: $mars-red-color;
     font-size: 1rem;
     width: 100%;
     padding: 0;
   }
 
   ::placeholder {
-    color: #ff5435;
+    color: $mars-red-color;
     font-size: 1rem;
   }
 
@@ -73,9 +75,7 @@
   padding: 3rem 0;
 
   button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+    @include button;
     font-size: 2.2rem;
     margin: 0 auto;
   }

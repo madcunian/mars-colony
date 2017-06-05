@@ -1,6 +1,7 @@
+@import '../../../_variables.scss';
+
 .register-bg {
   background:
-    // radial-gradient(35vh at 50% 65% , rgba(255,84,53,.3), rgba(116,22,48,.6), rgba(0,0,0,.9)),
     linear-gradient(to bottom, rgba(0,0,0 ,0.9), rgba(255,84,53,.3)),
     url('../../../assets/martian.jpg');
   background-size: cover;
@@ -15,16 +16,10 @@
 
 h2, button {
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: $mars-font;
   font-size: 2.2rem;
   font-weight: 100;
 }
-
-// h2 {
-//   font-size: 1.5rem;
-//   text-transform: uppercase;
-//   letter-spacing: 1rem;
-// }
 
 .register-form fieldset {
   display: flex;
@@ -50,21 +45,19 @@ h2, button {
     appearance: none;
     background-color: transparent;
     border: none;
-    color: #ff5435;
+    color: $mars-red-color;
     font-size: 1rem;
     width: 100%;
   }
 
   ::placeholder {
-    color: #ff5435;
+    color: $mars-red-color;
     font-size: 1rem;
   }
 }
 
 button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+  @include button;
   margin: 0 auto;
   padding: 1rem 0;
 }

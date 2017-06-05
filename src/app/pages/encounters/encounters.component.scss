@@ -1,3 +1,5 @@
+@import '../../../_variables.scss';
+
 .enc-bg {
   background:
     url('../../../assets/mars2.jpg');
@@ -12,7 +14,7 @@
 
 .header, button {
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: $mars-font;
   font-size: 2.2rem;
   font-weight: 100;
   padding: 2.5rem 0;
@@ -27,7 +29,7 @@
 }
 
 ul {
-  font-family: 'Roboto', sans-serif;
+  font-family: $mars-font;
   font-size: 1.1rem;
   font-weight: 100;
   line-height: 1.2rem;
@@ -41,6 +43,7 @@ li {
   padding: 0 1rem;
 
   .date-name {
+    color: $mars-red-color;
     font-size: .8rem;
     font-weight: 300;
   }
@@ -51,10 +54,8 @@ li {
   padding: 5rem 0;
 }
 
-.enc-button {
-  border: none;
-  background-color: transparent;
+button {
+  @include button;
   color: #fff;
-  cursor: pointer;
   padding: 0;
 }

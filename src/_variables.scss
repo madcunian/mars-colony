@@ -1,0 +1,9 @@
+$mars-font: 'Roboto', sans-serif;
+$mars-font-weight: 100;
+$mars-red-color: #ff5435;
+
+@mixin button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
